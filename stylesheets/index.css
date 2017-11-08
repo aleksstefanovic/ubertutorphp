@@ -1,0 +1,12 @@
+.profilepic {
+    height: 20rem;
+}
+
+.nodecor, .nodecor:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.stretch {
+    height: 100%;
+}
