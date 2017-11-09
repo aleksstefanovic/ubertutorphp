@@ -1,29 +1,12 @@
-<html lang="en">
-    <?php
-        include_once ('../../header.php');
-    ?>
-    <body>
-        <?php
-            include_once ('../nav/navbar.php');
-        ?>
-        <br>
-        <div class="container-fluid">
-            <br>
-            <div class="row">
-                <div id="navcol" class="col-1">
-                    <?php
-                        include_once ('../nav/nav.php');
-                    ?>
-                </div>
+<?php
 
-                <div id="main" class="col-9">
-                <div class="media">
-                    <div class="media-body">
-                        <h5 class="mt-0">Settings</h5>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+    include_once ('../../header.php');
+
+    include_once ('../nav/navbar.php');
+    include_once ('../nav/nav.php');
+
+    include_once ('./settings_view.php');
+
+    include_once ('../../footer.php');
+
+?>

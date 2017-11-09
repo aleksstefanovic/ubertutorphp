@@ -1,5 +1,5 @@
 .profilepic {
-    height: 20rem;
+    height: 20rem !important;
 }
 
 .nodecor, .nodecor:hover {
@@ -9,4 +9,12 @@
 
 .stretch {
     height: 100%;
+}
+
+.uber-tutor-signin {
+    float:right
+}
+
+.uber-tutor-intro {
+    height: 20rem;
 }

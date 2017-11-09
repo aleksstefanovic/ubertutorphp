@@ -1,4 +1,4 @@
-<div class="card text-white  mb-3 mr-3" style="background-color: #68bfff;">
+<div class="card text-white  mb-3 mr-3 uber-tutor-card" style="background-color: #68bfff;">
     <div class="card-header">Tutor</div>
     <img class="card-img-top card-img-top profilepic" src=<?php echo $tutor['profilePic'] ?> alt="Image">
     <div class="card-body">
