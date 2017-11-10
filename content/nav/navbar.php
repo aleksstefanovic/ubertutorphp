@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <nav class="navbar navbar-light" style="background-color: #68bfff;">
     <div class="row">
         <div class="col-5">
@@ -18,7 +22,15 @@
             </div>
         </div>
 
-        <a class="btn btn-secondary uber-tutor-signin" role="button" href="/content/signin/signin.php">SIGN IN</a>
+        <?php if (empty($_SESSION['LoggedIn'])) { ?>
+            <a class="btn btn-secondary uber-tutor-signin" role="button" href="/content/signin/signin.php">SIGN IN</a>
+        <?php } else { ?>
+            <p>
+                <?php
+                    echo "Welcome " . $_SESSION['firstName'] . "!";
+                ?>
+            </p>
+        <?php } ?>
     </div>
 </nav>
 

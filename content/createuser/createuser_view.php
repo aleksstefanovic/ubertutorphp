@@ -26,7 +26,7 @@
                 </div>
                 <div id="createUserCostPerHour" class="form-group" style="display: none">
                     <label>How Much Do You Charge Per Hour?</label>
-                    <input name="cost" type="number" class="form-control">
+                    <input name="cost" type="number" class="form-control" step="0.01">
                 </div>
                 <div class="form-group">
                     <label>Introduction</label>
