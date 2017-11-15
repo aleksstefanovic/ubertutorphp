@@ -38,7 +38,7 @@
 
             $stmt->execute();
 
-            $query = "SELECT id, userName, firstName, lastName FROM users WHERE userName='" . $email . "';";
+            $query = "SELECT id, roleId, userName, firstName, lastName FROM users WHERE userName='" . $email . "';";
             $users = $db->query($query);    
             $user = $users->fetch();
           
@@ -48,6 +48,7 @@
             $_SESSION['firstName'] = $user['firstName'];
             $_SESSION['lastName'] = $user['lastName'];
             $_SESSION['userId'] = $user['id'];
+            $_SESSION['roleId'] = $user['roleId'];
 
             header('Location: '. "/index.php");
         }

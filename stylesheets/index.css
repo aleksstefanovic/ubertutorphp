@@ -15,6 +15,18 @@
     float:right
 }
 
+.uber-tutor-welcome {
+    margin-top: 0.5rem;
+}
+
 .uber-tutor-intro {
     height: 20rem;
+}
+
+.uber-tutor-nav {
+    width: 100%;
+}
+
+.uber-tutor-view {
+    width: 100% !important;
 }

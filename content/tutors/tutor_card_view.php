@@ -5,5 +5,8 @@
         <h4 class="card-title"><?php echo $tutor['firstName'] . ' ' . $tutor['lastName'] ?></h4>
         <p class="card-text"><?php echo $tutor['intro'] ?></p>
     </div>
-    <button class="btn btn-secondary" type="button" onClick="viewTutor()">View</button>
+     <form method="get" action="/content/tutor/tutor.php">
+        <input type="hidden" name="tutorid" value=<?php echo $tutor['id'] ?> />
+        <button class="btn btn-secondary uber-tutor-view" type="submit">View</button>
+    </form>
 </div>
