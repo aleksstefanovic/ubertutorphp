@@ -18,7 +18,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-3">
                 <h6>Status</h6>
             </div>
             <div class="col">
@@ -51,4 +51,5 @@
     <br />
     <br />
     <a class="btn btn-outline-danger" role="button" onClick="deleteAccount()">DELETE ACCOUNT</a>
+    <br />
 </div>

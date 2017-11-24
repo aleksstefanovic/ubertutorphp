@@ -1,5 +1,5 @@
 <div id="main" class="col-9">
-     <form method="post" action="/content/createuser/process_createuser.php">
+     <form method="post" action="/content/createuser/process_createuser.php" enctype="multipart/form-data">
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -13,6 +13,7 @@
                 <div class="form-group">
                     <label>Profile Picture</label>
                     <input name="profilePic" type="file" class="form-control" placeholder="Select a profile pic" accept="image/*">
+                    <small class="form-text uber-tutor-error"><?php echo $_SESSION['createuser-profilepic-message'] ?></small>
                 </div>
             </div>
             <div class="col">
@@ -39,6 +40,7 @@
                 <div class="form-group">
                     <label>Email Address</label>
                     <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small class="form-text uber-tutor-error"><?php echo $_SESSION['createuser-email-message'] ?></small>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
@@ -47,9 +49,11 @@
                 <div class="form-group">
                     <label>Password (Repeat)</label>
                     <input name="password2" type="password" class="form-control" placeholder="Password (Repeat)">
+                    <small class="form-text uber-tutor-error"><?php echo $_SESSION['createuser-password2-message'] ?></small>
                 </div>
             </div>
         </div>
         <button type="submit" class="btn btn-secondary">Create User</button>
+        <small class="form-text uber-tutor-error"><?php echo $_SESSION['createuser-submit-message'] ?></small>
     </form>
 </div>

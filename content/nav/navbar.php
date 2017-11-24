@@ -11,9 +11,9 @@
             <a class="nodecor" href="/">UBER TUTOR</a>
         </div>
 
-        <div class="col">
+        <div id="full-search" class="col">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search tutors..." aria-label="Search tutors..." aria-describedby="basic-addon2">
+                <input id="searchFilter" type="text" class="form-control" placeholder="Search tutors..." aria-label="Search tutors..." aria-describedby="basic-addon2">
                 <span class="input-group-btn">
                 <button class="btn btn-secondary" type="button" onClick="searchTutors()">
                       <img src="/media/icons/ic_search_white_24px.svg" alt="Image">
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="col">
+        <div id="full-signin" class="col">
             <?php if (empty($_SESSION['LoggedIn'])) { ?>
                 <a class="btn btn-secondary uber-tutor-signin" role="button" href="/content/signin/signin.php">SIGN IN</a>
             <?php } else { ?>

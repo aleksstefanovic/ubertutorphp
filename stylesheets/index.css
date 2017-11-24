@@ -30,3 +30,7 @@
 .uber-tutor-view {
     width: 100% !important;
 }
+
+.uber-tutor-error {
+    color: red !important;
+}
