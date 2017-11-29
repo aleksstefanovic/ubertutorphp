@@ -11,7 +11,7 @@
                 <p><?php echo 'Cost per Hour: $' . $user['costPerHour'] ?></p>    
             <?php } ?>
         </div>
-        <img class="d-flex mr-3 profilepic" src=<?php echo $user['profilePic'] ?> alt="Profile Picture">
+        <img class="profilepic" src=<?php echo $user['profilePic'] ?> alt="Profile Picture">
     </div>
 
     <br />
@@ -51,5 +51,6 @@
     <br />
     <br />
     <a class="btn btn-outline-danger" role="button" onClick="deleteAccount()">DELETE ACCOUNT</a>
+    <small class="form-text uber-tutor-error"><?php echo $_SESSION['delete-submit-message'] ?></small>
     <br />
 </div>

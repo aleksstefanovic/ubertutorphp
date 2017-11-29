@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <br>
     <div class="row">
-        <div id="navcol" class="col-1">
+        <div id="navcol" class="col-2">
             <div class="collapse bg-light stretch" id="navbarToggleExternalContent">
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -27,6 +27,7 @@
                             <img class="mr-3" src="/media/icons/ic_settings_black_24px.svg" alt="Image">Settings
                         </a>
                     </li>
+                    <br />
                     <li id="mobile-search" class="nav-item">
                         <div class="input-group">
                             <input id="searchFilter-mobile" type="text" class="form-control" placeholder="Search tutors..." aria-label="Search tutors..." aria-describedby="basic-addon2">

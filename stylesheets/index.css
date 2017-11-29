@@ -1,5 +1,7 @@
 .profilepic {
     height: 20rem !important;
+    width: 20rem !important;
+    border-radius: 50%;
 }
 
 .nodecor, .nodecor:hover {
@@ -33,4 +35,37 @@
 
 .uber-tutor-error {
     color: red !important;
+}
+
+#mobile-search {
+    display: none;
+}
+#mobile-signin {
+    display: none;
+}
+#full-search {
+    display: initial;
+}
+#full-signin {
+    display: initial;
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile-search {
+        display: initial;
+    }
+    #mobile-signin {
+        display: initial;
+    }
+    #full-search {
+        display: none;
+    }
+    #full-signin {
+        display: none;
+    }
+
+    .profilepic {
+        height: 10rem !important;
+        width: 10rem !important;
+    }
 }

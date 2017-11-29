@@ -20,25 +20,3 @@ function expandNav () {
         }
     }
 }
-
-window.onload = function responsiveNav () {
-    var width = window.innerWidth;
-    //alert ("reacting");
-
-    if (width < 600) {
-        $("#mobile-search").attr("hidden", false);
-        $("#mobile-signin").attr("hidden", false);
-        $("#full-search").attr("hidden", true);
-        $("#full-signin").attr("hidden", true);
-
-        //alert ("mobile");
-    }
-    else {
-        $("#mobile-search").attr("hidden", true);
-        $("#mobile-signin").attr("hidden", true);
-        $("#full-search").attr("hidden", false);
-        $("#full-signin").attr("hidden", false);
-
-        //alert ("full");
-    }
-}

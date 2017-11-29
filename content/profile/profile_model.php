@@ -64,7 +64,7 @@
             $transaction['totalCost'] = round($totalCost, 2);
         }
 
-        if (empty($result['tutorAccept'])) {
+        if ($result['tutorAccept'] == NULL) {
             $transaction['status'] = "Pending tutor approval";
             $transaction['statusId'] = 1;
         }

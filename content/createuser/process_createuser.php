@@ -45,17 +45,15 @@
             header('Location: '. "/content/createuser/createuser.php");
         }
         else {
-            $target_dir = "/var/www/html/media/";
-            $target_file = $target_dir . basename($_FILES["profilePic"]["name"]);
+            $target_dir = "../../media/profilepics/";
+            $target_file = $target_dir . $email;
             $uploadOk = 1;
             $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
             $check = getimagesize($_FILES["profilePic"]["tmp_name"]);
             if ($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
                 $uploadOk = 1;
             } else {
-                echo "File is not an image.";
                 $uploadOk = 0;
 
                 $_SESSION['createuser-profilepic-message'] = "Your profile picture must be an image file";
@@ -72,7 +70,10 @@
                 $stmt->bindParam(':intro', $intro);
                 $stmt->bindParam(':costPerHour', $cost);
                 $stmt->bindParam(':userName', $email);
-                $stmt->bindParam(':password', $password);
+
+                $salt = substr(strtr(base64_encode(openssl_random_pseudo_bytes(22)), '+', '.'), 0, 22);
+                $hashedPassword = crypt($password, '$2y$12$' . $salt);
+                $stmt->bindParam(':password', $hashedPassword);
 
                 $stmt->execute();
 
